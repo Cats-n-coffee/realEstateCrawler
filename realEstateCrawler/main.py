@@ -1,4 +1,4 @@
-from remaxCom import crawlRemaxCom
+from remaxCom import crawl_remax_com
 
 if __name__ == "__main__":
-    crawlRemaxCom()
+    crawl_remax_com()
