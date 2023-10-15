@@ -3,7 +3,7 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
 from dotenv import load_dotenv
 import os
-from realEstateCrawler.helpers.convertToJson import convert_to_json_file
+from helpers.convertToJson import convert_to_json_file
 
 load_dotenv()
 remax_url = os.environ["REMAX_URL"]
