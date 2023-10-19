@@ -21,6 +21,8 @@ def read_listing_by_mls(cursor, mls_number):
     except Exception as e:
         print(f"EXCEPTION READ {e}")
 
+def update_listing(cursor, mls_number):
+    print('will update')
 
 def insertListing(cursor, listing):
     try:
@@ -45,9 +47,13 @@ def make_connection():
 def main(data):
     cursor = make_connection();
 
-    # for listing in data:
+    for listing in data:
         # read the listing by mlsnumber
+        db_lookup = False if read_listing_by_mls(cursor, listing['mls_number']) == None else True
+        print(db_lookup)
         # if exists update
+        if db_lookup:
+            update_listing(cursor, listing['mls_number'])
         # else insert
     # insertListing(cursor, data[0])
     
