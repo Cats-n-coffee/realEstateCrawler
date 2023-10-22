@@ -16,7 +16,7 @@ def crawl_remax_com():
     options.add_argument('--proxy-server="164.132.170.100:80"')
     driver.get(remax_url)
 
-    driver.implicitly_wait(4.0) # look up later
+    driver.implicitly_wait(4.0)
 
     listings = driver.find_elements(By.CSS_SELECTOR, 'div[data-test="listing-card"]')
     for listing in listings:
